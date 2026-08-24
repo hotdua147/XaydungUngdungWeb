@@ -1,0 +1,66 @@
+# ==========================================
+# 1. MONOREPO WORKSPACES & DEPENDENCIES
+# ==========================================
+# Chặn dependencies ở mọi cấp (apps/*, packages/*, root)
+node_modules/
+.pnpm-store/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+.pnp
+.pnp.js
+
+# Cache của các công cụ Monorepo (Turbo, Lerna, Nx)
+.turbo/
+.lerna/
+.nx/
+
+# ==========================================
+# 2. ENVIRONMENT & SECRETS (BẢO MẬT)
+# ==========================================
+# Chặn file secret ở tất cả các dự án con
+.env
+.env.*
+!.env.example
+!.env.template
+
+# ==========================================
+# 3. BUILD OUTPUTS & CACHES (RECURSIVE)
+# ==========================================
+# Chặn đầu ra build của React, Vite, Next.js, Node.js ở mọi cấp
+dist/
+build/
+out/
+.next/
+.cache/
+.eslintcache
+.prettiercache
+
+# ==========================================
+# 4. LOGS & DIAGNOSTICS
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# ==========================================
+# 5. IDE, OS & DEVCONTAINER
+# ==========================================
+# VS Code (Giữ lại settings dùng chung cho nhóm)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# DevContainer Temporary Files
+.devcontainer/*.log
+.devcontainer/*.data

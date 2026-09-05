@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Giới Thiệu Cá Nhân - Trần Công Thành Đạt</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cv-container">
+    
+    <!-- HEADER -->
+    <header class="cv-header">
+      <h1 class="name">TRẦN CÔNG THÀNH ĐẠT</h1>
+      <div class="contact-info">
+        <span>+84 981 027 892</span> | 
+        <a href="mailto:hotdua147@gmail.com">hotdua147@gmail.com</a> | 
+        <a href="https://linkedin.com/in/hotdua147" target="_blank">linkedin.com/in/hotdua147</a> | 
+        <a href="https://github.com/hotdua147" target="_blank">github.com/hotdua147</a>
+      </div>
+    </header>
+
+    <!-- HỌC VẤN / EDUCATION -->
+    <section class="cv-section">
+      <h2 class="section-title">EDUCATION</h2>
+      <div class="section-content">
+        <div class="item-header">
+          <span class="institution">Phenikaa University</span>
+          <span class="location">Hanoi, Vietnam</span>
+        </div>
+        <div class="item-subheader">
+          <span class="degree">B.S. in Computer Science (Artificial Intelligence & Operations Research)</span>
+          <span class="date">2023 - Present</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DỰ ÁN / PROJECTS -->
+    <section class="cv-section">
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="section-content">
+        
+        <!-- Project 1 -->
+        <div class="project-item">
+          <div class="item-header">
+            <span class="project-name">Autonomous Radar Resource Allocation System</span>
+            <span class="date">2026 - Present</span>
+          </div>
+          <p class="tech-stack"><strong>Key Concepts:</strong> Cognitive Radar, Deep Reinforcement Learning (DRL), Target Tracking, Resource Optimization.</p>
+          <p class="tech-stack"><strong>Core Technologies:</strong> PyTorch, Gymnasium, Kalman Filter, Deep Q-Learning (DQN), Stochastic Dynamics.</p>
+          <ul class="bullet-list">
+            <li>Engineered a closed-loop Radar Simulation Environment in Python/Gymnasium for real-time target tracking under dynamic motion constraints.</li>
+            <li>Integrated a Discrete-time Kalman Filter (KF) to process noisy sensor state estimations, utilizing the Trace of Posterior Covariance Matrix as real-time state inputs for the agent.</li>
+            <li>Implemented a Deep Q-Network (DQN) with Experience Replay and Target Network synchronization to optimize dynamic radar dwell time scheduling.</li>
+            <li>Designed a Quadratic Reward Function penalizing tracking uncertainty and power consumption to achieve a Pareto-optimal operating policy.</li>
+            <li>Reduced total system energy consumption by 90% compared to continuous maximum-power operation while keeping mean tracking error under 8 meters.</li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+          <div class="item-header">
+            <span class="project-name">Multimodal Semantic Image Search Engine</span>
+            <span class="date">2026 - Present</span>
+          </div>
+          <p class="tech-stack"><strong>Key Concepts:</strong> Vector Search, Representation Learning, Vision-Language Alignment, Cross-Modal Retrieval.</p>
+          <p class="tech-stack"><strong>Core Technologies:</strong> PyTorch, CLIP, SigLIP, FAISS, Flickr30k, Vector Similarity Search.</p>
+          <ul class="bullet-list">
+            <li>Built a cross-modal image-text retrieval pipeline benchmarking contrastive softmax (CLIP) and sigmoid-based pairwise (SigLIP) embedding alignments.</li>
+            <li>Optimized GPU training memory footprint by implementing sigmoid pairwise loss, mitigating bottlenecks caused by large-batch softmax normalization.</li>
+            <li>Evaluated text-to-image search performance on the Flickr30k dataset, achieving a baseline Recall@1 score of 64.1%.</li>
+            <li>Integrated a scalable similarity search module using FAISS vector quantization with L2-normalized inner products for sub-millisecond embedding lookup.</li>
+          </ul>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-item">
+          <div class="item-header">
+            <span class="project-name">End-to-End Perception & Reasoning Engine for Autonomous Driving</span>
+            <span class="date">2024 - 2026</span>
+          </div>
+          <p class="tech-stack"><strong>Key Concepts:</strong> Multi-task Perception, Model Compression, Edge Deployment, Vision-Language Reasoning.</p>
+          <p class="tech-stack"><strong>Core Technologies:</strong> Lane Detection, Object Detection, Semantic Segmentation, INT8/FP16 Quantization, Vision-Language Models (VLMs).</p>
+          <ul class="bullet-list">
+            <li>Built an end-to-end multi-task perception pipeline combining YOLOv8 for object detection, DeepLab V3+ (ResNet-50) for semantic segmentation, and Spatial CNN (SCNN) for lane tracking on BDD100K and CULane.</li>
+            <li>Modeled lane tracking as structured prediction via SCNN, leveraging directional message passing to process long-range spatial context along lane boundaries.</li>
+            <li>Integrated multimodal vision features with SmolVLM to enable lightweight Visual Question Answering (VQA) for complex driving scene reasoning.</li>
+            <li>Profiled latency-accuracy trade-offs along the Pareto frontier, applying FP16 acceleration and INT8 quantization to achieve real-time inference speed.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KỸ NĂNG / TECHNICAL SKILLS -->
+    <section class="cv-section">
+      <h2 class="section-title">TECHNICAL SKILLS</h2>
+      <div class="section-content">
+        <ul class="skills-list">
+          <li><strong>Languages/OS:</strong> Python, C++, Linux (Ubuntu), LaTeX.</li>
+          <li><strong>AI/ML & Backend:</strong> PyTorch, Hugging Face, OpenCV, Gymnasium, NumPy, Scikit-learn, FastAPI.</li>
+          <li><strong>Tools & Infrastructure:</strong> Docker, Git, GitHub.</li>
+          <li><strong>Specialized:</strong> Foundation Models & Multimodal Representation Learning, Reinforcement Learning, Deep Learning, Operations Research & Optimization.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

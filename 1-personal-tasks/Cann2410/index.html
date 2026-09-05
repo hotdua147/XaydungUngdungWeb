@@ -3,161 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Giới thiệu bản thân - Vũ Tuyết Cần</title>
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+            background: #f5f7fa;
             color: #333;
-            line-height: 1.7;
-            padding: 40px 20px;
         }
 
         .container {
-            max-width: 850px;
-            margin: auto;
-            background-color: white;
-            padding: 40px;
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Tiêu đề */
         h1 {
             text-align: center;
-            color: #d63384;
-            font-size: 36px;
+            color: #2c3e50;
             margin-bottom: 10px;
         }
 
-        .subtitle {
+        .welcome {
             text-align: center;
             color: #777;
-            font-size: 17px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        /* Ảnh đại diện */
-        .avatar {
-            display: block;
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .profile img {
             width: 220px;
-            height: 280px;
+            height: 220px;
             object-fit: cover;
-            object-position: center;
-            margin: 0 auto 30px;
-            border-radius: 20px;
-            border: 5px solid #f8bbd0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            border: 4px solid #3498db;
         }
 
-        /* Các tiêu đề */
-        h2 {
-            color: #d63384;
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f8bbd0;
-            padding-bottom: 8px;
-        }
-
-        /* Thông tin cá nhân */
         .info {
-            background-color: #fff5f8;
-            padding: 20px;
-            border-radius: 12px;
+            flex: 1;
         }
 
         .info p {
             font-size: 17px;
-            margin: 7px 0;
+            line-height: 1.7;
+            margin: 8px 0;
         }
 
-        .info strong {
-            color: #c2185b;
+        .section {
+            margin-top: 30px;
         }
 
-        /* Danh sách */
+        .section h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+
+        .section p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
         ul {
-            padding-left: 25px;
-        }
-
-        li {
             font-size: 17px;
-            margin-bottom: 8px;
+            line-height: 1.9;
         }
 
-        /* Các khung nội dung */
-        .box {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 17px;
-        }
-
-        .box strong {
-            color: #c2185b;
-        }
-
-        /* Phương châm */
-        .quote {
-            background-color: #fff0f6;
-            border-left: 5px solid #d63384;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-style: italic;
-            text-align: center;
-        }
-
-        /* Chân trang */
         .footer {
             text-align: center;
             margin-top: 35px;
             padding-top: 20px;
             border-top: 1px solid #ddd;
-            color: #888;
-            font-size: 14px;
+            color: #777;
         }
 
-        /* Hiệu ứng khi di chuột */
-        .info,
-        .box,
-        .quote {
-            transition: 0.3s;
-        }
-
-        .info:hover,
-        .box:hover,
-        .quote:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Giao diện điện thoại */
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 10px;
+        @media (max-width: 650px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .container {
-                padding: 25px 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .avatar {
-                width: 180px;
-                height: 240px;
+            .profile img {
+                width: 200px;
+                height: 200px;
             }
         }
     </style>
@@ -167,201 +112,91 @@
 
     <div class="container">
 
-        <!-- TIÊU ĐỀ -->
         <h1>GIỚI THIỆU BẢN THÂN</h1>
 
-        <p class="subtitle">
-            Xin chào! Mình là Vũ Tuyết Cần 🌷
+        <p class="welcome">
+            Xin chào! Mình là Vũ Tuyết Cần. Đây là một vài thông tin về mình.
         </p>
 
-
-        <!-- HÌNH ẢNH ĐẠI DIỆN -->
-        <img src="avatar.jpg"
-             alt="Ảnh đại diện của Vũ Tuyết Cần"
-             class="avatar">
-
-
         <!-- THÔNG TIN CÁ NHÂN -->
-        <h2>👤 Thông tin cá nhân</h2>
+        <div class="profile">
 
-        <div class="info">
+            <img src="avatar.jpg" alt="Ảnh đại diện của Vũ Tuyết Cần">
 
-            <p>
-                <strong>Họ và tên:</strong>
-                Vũ Tuyết Cần
-            </p>
+            <div class="info">
+                <p><strong>Họ và tên:</strong> Vũ Tuyết Cần</p>
 
-            <p>
-                <strong>Mã sinh viên:</strong>
-                24103346
-            </p>
+                <p><strong>Mã sinh viên:</strong> 24103346</p>
 
-            <p>
-                <strong>Ngày sinh:</strong>
-                21/12/2006
-            </p>
+                <p><strong>Ngày sinh:</strong> 21/12/2006</p>
 
-            <p>
-                <strong>Giới tính:</strong>
-                Nữ
-            </p>
+                <p><strong>Giới tính:</strong> Nữ</p>
+            </div>
 
         </div>
-
 
         <!-- GIỚI THIỆU -->
-        <h2>🌷 Giới thiệu về bản thân</h2>
+        <div class="section">
 
-        <div class="box">
-
-            <p>
-                Xin chào! Mình là <strong>Vũ Tuyết Cần</strong>.
-                Mình là một người thân thiện, hòa đồng và luôn muốn
-                học hỏi những điều mới trong cuộc sống.
-            </p>
+            <h2>🌷 Giới thiệu về bản thân</h2>
 
             <p>
-                Mình yêu thích sự sáng tạo, thích khám phá những điều
-                thú vị và luôn cố gắng hoàn thiện bản thân mỗi ngày.
-                Mình cũng rất thích dành thời gian cho gia đình,
-                bạn bè và những hoạt động mà mình yêu thích.
-            </p>
-
-            <p>
-                Trong học tập, mình luôn cố gắng chủ động tiếp thu
-                kiến thức mới và rèn luyện thêm các kỹ năng cần thiết
-                cho công việc trong tương lai.
+                Mình là Vũ Tuyết Cần, sinh ngày 21/12/2006.
+                Mình là người khá thân thiện, hòa đồng và luôn muốn
+                học hỏi thêm những điều mới. Mình yêu thích sự sáng tạo
+                và thích khám phá những lĩnh vực liên quan đến công nghệ
+                và thương mại điện tử.
             </p>
 
         </div>
-
 
         <!-- SỞ THÍCH -->
-        <h2>❤️ Sở thích</h2>
+        <div class="section">
 
-        <ul>
+            <h2>🎵 Sở thích</h2>
 
-            <li>🎵 Nghe nhạc vào thời gian rảnh.</li>
+            <ul>
+                <li>Nghe nhạc vào thời gian rảnh.</li>
+                <li>Xem phim và giải trí.</li>
+                <li>Chụp ảnh và lưu giữ những khoảnh khắc đẹp.</li>
+                <li>Đi chơi và khám phá những địa điểm mới.</li>
+                <li>Tìm hiểu về mua sắm và thương mại điện tử.</li>
+            </ul>
 
-            <li>🎬 Xem phim và các chương trình giải trí.</li>
-
-            <li>📸 Chụp ảnh và lưu giữ những khoảnh khắc đẹp.</li>
-
-            <li>✈️ Đi du lịch và khám phá những địa điểm mới.</li>
-
-            <li>☕ Đi cà phê và trò chuyện cùng bạn bè.</li>
-
-            <li>📱 Tìm hiểu những xu hướng mới trên mạng xã hội.</li>
-
-        </ul>
-
+        </div>
 
         <!-- SỞ TRƯỜNG -->
-        <h2>⭐ Sở trường</h2>
+        <div class="section">
 
-        <ul>
+            <h2>✨ Sở trường</h2>
 
-            <li>💬 Giao tiếp và trò chuyện với mọi người.</li>
-
-            <li>🤝 Làm việc nhóm và phối hợp với các thành viên.</li>
-
-            <li>💡 Sáng tạo ý tưởng và nội dung.</li>
-
-            <li>📱 Sử dụng mạng xã hội và cập nhật xu hướng.</li>
-
-            <li>📚 Có khả năng học hỏi những kiến thức mới.</li>
-
-            <li>💪 Có trách nhiệm với công việc được giao.</li>
-
-        </ul>
-
-
-        <!-- TÍNH CÁCH -->
-        <h2>🌸 Tính cách</h2>
-
-        <div class="box">
-
-            <p>
-                Mình là người khá thân thiện, hòa đồng và tích cực.
-                Mình thích làm việc cùng mọi người và luôn cố gắng
-                tạo ra không khí vui vẻ khi làm việc nhóm.
-            </p>
-
-            <p>
-                Mình cũng là người có tinh thần trách nhiệm, luôn
-                cố gắng hoàn thành công việc được giao và sẵn sàng
-                học hỏi khi gặp những điều chưa biết.
-            </p>
+            <ul>
+                <li>Giao tiếp và làm việc với mọi người.</li>
+                <li>Làm việc nhóm.</li>
+                <li>Sáng tạo và trình bày ý tưởng.</li>
+                <li>Chủ động học hỏi những kiến thức mới.</li>
+                <li>Có tinh thần trách nhiệm trong công việc.</li>
+            </ul>
 
         </div>
-
 
         <!-- MỤC TIÊU -->
-        <h2>🎯 Mục tiêu trong tương lai</h2>
+        <div class="section">
 
-        <div class="box">
-
-            <p>
-                Trong thời gian tới, mình muốn trau dồi thêm kiến thức
-                và kỹ năng về <strong>Thương mại điện tử</strong>,
-                Marketing và kinh doanh trực tuyến.
-            </p>
+            <h2>🎯 Mục tiêu</h2>
 
             <p>
-                Mình mong muốn có thể phát triển bản thân trong lĩnh vực
-                <strong>Digital Marketing</strong>, nâng cao khả năng
-                sáng tạo nội dung, giao tiếp và làm việc chuyên nghiệp.
-            </p>
-
-            <p>
-                Mục tiêu của mình là có một công việc phù hợp với sở thích,
-                phát huy được khả năng của bản thân và xây dựng một
-                tương lai tốt đẹp.
+                Mục tiêu của mình là không ngừng hoàn thiện bản thân,
+                nâng cao kiến thức và kỹ năng chuyên môn. Trong tương lai,
+                mình muốn phát triển trong lĩnh vực thương mại điện tử
+                và marketing, đồng thời tích lũy thêm nhiều kinh nghiệm
+                để phục vụ cho công việc sau này.
             </p>
 
         </div>
 
-
-        <!-- KỸ NĂNG -->
-        <h2>💻 Kỹ năng muốn phát triển</h2>
-
-        <ul>
-
-            <li>Marketing và Digital Marketing.</li>
-
-            <li>Sáng tạo nội dung trên mạng xã hội.</li>
-
-            <li>Kỹ năng giao tiếp và thuyết trình.</li>
-
-            <li>Kỹ năng làm việc nhóm.</li>
-
-            <li>Kỹ năng quản lý thời gian.</li>
-
-        </ul>
-
-
-        <!-- PHƯƠNG CHÂM -->
-        <h2>🌱 Phương châm sống</h2>
-
-        <div class="quote">
-
-            "Mỗi ngày cố gắng một chút để trở thành phiên bản
-            tốt hơn của chính mình."
-
-        </div>
-
-
-        <!-- CHÂN TRANG -->
         <div class="footer">
-
-            <p>
-                © 2026 - Trang giới thiệu cá nhân
-            </p>
-
-            <p>
-                Vũ Tuyết Cần - MSSV: 24103346
-            </p>
-
+            <p>© 2026 - Vũ Tuyết Cần</p>
         </div>
 
     </div>

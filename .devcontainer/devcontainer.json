@@ -5,9 +5,11 @@
     "vscode": {
       "extensions": [
         "ritwickdey.LiveServer",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "anthropic.claude-code"
       ]
     }
   },
-  "forwardPorts": [5500]
+  "forwardPorts": [5500],
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code"
 }

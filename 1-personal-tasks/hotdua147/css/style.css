@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, 'Georgia', serif;
   background-color: #f4f4f4;
   color: #111111;
   line-height: 1.45;
@@ -53,7 +53,11 @@ body {
 
 /* Sections */
 .cv-section {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+}
+
+.cv-section:last-child {
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -67,7 +71,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Header hàng của Item (Tên trường / Tên dự án và Ngày tháng) */
+/* Header hàng của Item */
 .item-header, .item-subheader {
   display: flex;
   justify-content: space-between;
@@ -75,7 +79,7 @@ body {
   font-size: 13.5px;
 }
 
-.institution, .project-name {
+.institution {
   font-weight: bold;
   color: #000000;
 }
@@ -94,33 +98,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Projects */
-.project-item {
-  margin-bottom: 14px;
-}
-
-.project-item:last-child {
-  margin-bottom: 0;
-}
-
-.tech-stack {
-  font-size: 12.5px;
-  margin-top: 2px;
-  color: #222222;
-}
-
-.bullet-list {
-  margin-top: 5px;
-  margin-left: 18px;
-}
-
-.bullet-list li {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #222222;
-  text-align: justify;
-}
-
 /* Technical Skills */
 .skills-list {
   list-style-type: square;
@@ -129,6 +106,49 @@ body {
 
 .skills-list li {
   font-size: 13px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   color: #222222;
+}
+
+/* Tối ưu hóa cho thiết bị di động */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .cv-container {
+    padding: 25px 20px;
+  }
+
+  .item-header, .item-subheader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location, .date {
+    margin-top: 2px;
+  }
+}
+
+/* Tối ưu hóa khi lưu/in thành file PDF */
+@media print {
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+  
+  .cv-container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .cv-section {
+    page-break-inside: avoid;
+  }
+
+  .contact-info a {
+    color: #000000;
+    text-decoration: none;
+  }
 }
